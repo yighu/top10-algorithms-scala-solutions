@@ -1,0 +1,28 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+
+# Scala
+*.sbt
+*.log
+*.class
+project/target/
+project/project
+target/
+.bsp/
+lib_managed/
+logs/
+project/boot/
+
+# IntelliJ IDEA
+.idea/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
