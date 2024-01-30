@@ -32,9 +32,9 @@ object QuickSort extends App {
   def sort(arr: Array[Int]) = {
     // A utility function to swap two elements
     def swap(i: Int, j: Int): Unit = {
-      val temp = arr(i)
-      arr(i) = arr(j)
-      arr(j) = temp
+      val(ai, aj) = (arr(j), arr(i))
+      arr(i) = ai
+      arr(j) = aj
     }
 
     // This function takes last element as pivot,
