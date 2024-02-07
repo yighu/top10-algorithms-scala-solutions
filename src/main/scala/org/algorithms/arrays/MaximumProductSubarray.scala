@@ -40,5 +40,5 @@ object MaximumProductSubarray extends App{
 
   val arr = Array(1, -2, -3, 0, 7, -8, -2)
   val n = arr.length
-  System.out.printf("Maximum Sub array product is %d", maxSubarrayProduct(arr, n))
+  printf("Maximum Sub array product is %d", maxSubarrayProduct(arr, n))
 }

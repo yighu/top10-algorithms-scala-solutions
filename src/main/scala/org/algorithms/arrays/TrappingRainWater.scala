@@ -83,5 +83,5 @@ object TrappingRainWater extends App{
 
   val arr = Array(0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1)
   val N = arr.length
-  System.out.print(maxWater(arr, N))
+  print(maxWater(arr, N))
 }

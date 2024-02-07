@@ -30,5 +30,5 @@ object KthSmallestLargestElementinUnsortedArray extends App{
   val K = 2
 
   // Function call
-  System.out.print("K'th smallest element is " + kthSmallest(arr, K))
+  print("K'th smallest element is " + kthSmallest(arr, K))
 }

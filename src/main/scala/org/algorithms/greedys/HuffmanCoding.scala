@@ -6,7 +6,7 @@ case class Node(char: Char, frequency: Int, left: Option[Node] = None, right: Op
 object HuffmanCoding extends App{
 
   def buildHuffmanTree(input: String): Node = {
-    val charFrequency = input.groupBy(identity).mapValues(_.length)
+    val charFrequency = input.groupBy(identity).view.mapValues(_.length)
     val priorityQueue = PriorityQueue.empty[Node](Ordering.by(-_.frequency))
 
     charFrequency.foreach { case (char, frequency) =>

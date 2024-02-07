@@ -12,57 +12,55 @@ object Dijkstra extends App {
    */
   import scala.collection.mutable
 
-  class Graph {
-    private val vertices = mutable.Map[Int, List[(Int, Int)]]()
+  class Graph(vertices: Int) {
+    val adjacencyList: Array[mutable.ListBuffer[(Int, Int)]] = Array.fill(vertices)(mutable.ListBuffer())
 
-    def addEdge(src: Int, dest: Int, weight: Int): Unit = {
-      vertices += (src -> ((dest, weight) :: vertices.getOrElse(src, Nil)))
-      vertices += (dest -> ((src, weight) :: vertices.getOrElse(dest, Nil)))
+    def addEdge(source: Int, destination: Int, weight: Int): Unit = {
+      adjacencyList(source).append((destination, weight))
+      adjacencyList(destination).append((source, weight))
     }
 
-    def dijkstra(start: Int): Map[Int, Int] = {
-      val distances = mutable.Map[Int, Int]()
-      val priorityQueue = mutable.PriorityQueue[(Int, Int)]()(Ordering.by(_._2))
+    def dijkstra(startNode: Int): Array[Int] = {
+      val distances: Array[Int] = Array.fill(vertices)(Int.MaxValue)
+      val priorityQueue: mutable.PriorityQueue[(Int, Int)] = mutable.PriorityQueue()
 
-      vertices.keys.foreach { vertex =>
-        distances += (vertex -> (if (vertex == start) 0 else Int.MaxValue))
-        priorityQueue.enqueue((vertex, distances(vertex)))
-      }
+      distances(startNode) = 0
+      priorityQueue.enqueue((startNode, 0))
 
       while (priorityQueue.nonEmpty) {
         val currentVertex = priorityQueue.dequeue()._1
 
-        vertices(currentVertex).foreach {
-          case (neighbor, weight) =>
-            val altDistance = distances(currentVertex) + weight
-            if (altDistance < distances(neighbor)) {
-              distances += (neighbor -> altDistance)
-              priorityQueue.enqueue((neighbor, altDistance))
-            }
+        for (neighbor <- adjacencyList(currentVertex)) {
+          val (nextVertex, edgeWeight) = neighbor
+          val newDistance = distances(currentVertex) + edgeWeight
+
+          if (newDistance < distances(nextVertex)) {
+            distances(nextVertex) = newDistance
+            priorityQueue.enqueue((nextVertex, newDistance))
+          }
         }
       }
 
-      distances.toMap
+      distances
     }
   }
 
-    val graph = new Graph()
+    val graph = new Graph(6)
 
-    // Adding edges to the graph
+    graph.addEdge(0, 1, 4)
+    graph.addEdge(0, 2, 3)
     graph.addEdge(1, 2, 1)
-    graph.addEdge(1, 3, 4)
-    graph.addEdge(2, 3, 2)
-    graph.addEdge(2, 4, 5)
-    graph.addEdge(3, 4, 1)
-    graph.addEdge(4, 5, 3)
+    graph.addEdge(1, 3, 2)
+    graph.addEdge(2, 3, 4)
+    graph.addEdge(3, 4, 2)
+    graph.addEdge(4, 5, 6)
 
-    // Running Dijkstra's algorithm starting from vertex 1
-    val startVertex = 1
-    val shortestDistances = graph.dijkstra(startVertex)
+    val startNode = 0
+    val distances = graph.dijkstra(startNode)
 
-    println(s"Shortest distances from vertex $startVertex:")
-    shortestDistances.foreach { case (vertex, distance) =>
-      println(s"Vertex $vertex: $distance")
+    println(s"Shortest distances from node $startNode:")
+    distances.zipWithIndex.foreach { case (distance, node) =>
+      println(s"To node $node: $distance")
     }
 
 

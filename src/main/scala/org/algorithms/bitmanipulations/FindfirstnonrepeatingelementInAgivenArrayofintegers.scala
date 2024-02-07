@@ -20,5 +20,5 @@ object FindfirstnonrepeatingelementInAgivenArrayofintegers extends App {
 
   val arr = List(9, 4, 9, 6, 7, 4)
 
-  System.out.print(firstNonRepeating(arr))
+  print(firstNonRepeating(arr))
 }
