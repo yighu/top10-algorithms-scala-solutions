@@ -34,5 +34,5 @@ object LongestPalindromicSubsequenceLPS extends App {
   }
 
   val s = "GEEKSFORGEEKS"
-  System.out.println("The length of the LPS is " + longestPalinSubseq(s))
+  println("The length of the LPS is " + longestPalinSubseq(s))
 }

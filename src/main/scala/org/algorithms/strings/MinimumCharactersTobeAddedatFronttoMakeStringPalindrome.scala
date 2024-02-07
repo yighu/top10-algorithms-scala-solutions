@@ -57,5 +57,5 @@ object MinimumCharactersTobeAddedatFronttoMakeStringPalindrome extends App {
   }
 
   val str = "AACECAAAA"
-  System.out.println(addMinChar(str))
+  println(addMinChar(str))
 }

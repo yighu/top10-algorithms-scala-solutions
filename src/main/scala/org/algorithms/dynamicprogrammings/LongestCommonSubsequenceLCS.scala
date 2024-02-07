@@ -19,5 +19,5 @@ object LongestCommonSubsequenceLCS extends App {
   val m = S1.length
   val n = S2.length
 
-  System.out.println("Length of LCS is" + " " + lcs(S1, S2, m, n))
+  println("Length of LCS is" + " " + lcs(S1, S2, m, n))
 }

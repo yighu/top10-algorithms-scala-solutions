@@ -41,5 +41,5 @@ object Countnumberofcoinsrequiredtomakeagivenvalue extends App {
   val coins = Array(1, 2, 3)
   val n = coins.length
 
-  System.out.println(count(coins, n, 5))
+  println(count(coins, n, 5))
 }

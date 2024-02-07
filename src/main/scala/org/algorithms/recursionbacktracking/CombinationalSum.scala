@@ -68,17 +68,17 @@ object CombinationalSum extends App {
 
   // If result is empty, then
   if (ans.size == 0) {
-    System.out.println("Empty")
+    println("Empty")
 
   }
 
   // print all combinations stored in ans
 
   for (i <- 0 until ans.size) {
-    System.out.print("(")
+    print("(")
     for (j <- 0 until ans.get(i).size) {
-      System.out.print(ans.get(i).get(j) + " ")
+      print(ans.get(i).get(j) + " ")
     }
-    System.out.print(") ")
+    print(") ")
   }
 }

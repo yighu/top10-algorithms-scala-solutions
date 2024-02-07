@@ -61,6 +61,6 @@ object JobSequencing extends App {
     Job('e', 3, 15)
   )
 
-  System.out.println("Following is maximum profit sequence of jobs")
+  println("Following is maximum profit sequence of jobs")
   printJobScheduling(new java.util.ArrayList[Job](arr.asJava), 3)
 }

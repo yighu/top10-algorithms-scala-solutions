@@ -39,5 +39,5 @@ object Connectnropeswithminimumcost extends App {
 
   val len = Array(4, 3, 2, 6)
   val size = len.length
-  System.out.println("Total cost for connecting" + " ropes is " + minCost(len, size))
+  println("Total cost for connecting" + " ropes is " + minCost(len, size))
 }

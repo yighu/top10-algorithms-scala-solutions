@@ -29,5 +29,5 @@ object MatrixChainMultiplication extends App {
 
   val arr = Array[Int](1, 2, 3, 4, 3)
   val N = arr.length
-  System.out.println("Minimum number of multiplications is " + MatrixChainOrder(arr, 1, N - 1))
+  println("Minimum number of multiplications is " + MatrixChainOrder(arr, 1, N - 1))
 }

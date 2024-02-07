@@ -81,5 +81,5 @@ object LongestPalindromicSubstring extends App{
 
   val s = "forgeeksskeegfor"
   val length = longestPalSubstr(s)
-  System.out.println("Length: " + length)
+  println("Length: " + length)
 }

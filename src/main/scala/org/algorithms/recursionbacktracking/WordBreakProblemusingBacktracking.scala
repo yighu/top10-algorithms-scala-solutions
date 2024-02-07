@@ -34,10 +34,10 @@ object WordBreakProblemusingBacktracking extends App {
     val n2 = str2.length // length of second string
     // List of strings in dictionary
     val dict = util.Arrays.asList("mobile", "samsung", "sam", "sung", "man", "mango", "icecream", "and", "go", "i", "love", "ice", "cream")
-    System.out.println("First Test:")
+    println("First Test:")
     // call to the method
     wordBreak(n1, dict, str1)
-    System.out.println("\nSecond Test:")
+    println("\nSecond Test:")
     wordBreak(n2, dict, str2)
 
 }

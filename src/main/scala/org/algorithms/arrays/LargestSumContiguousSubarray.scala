@@ -39,5 +39,5 @@ object LargestSumContiguousSubarray extends App {
   }
 
   val maxSum = maxSubArraySum(Array(-2, -3, 4, -1, -2, 1, 5, -3))
-  System.out.println("Maximum contiguous sum is " + maxSum)
+  println("Maximum contiguous sum is " + maxSum)
 }

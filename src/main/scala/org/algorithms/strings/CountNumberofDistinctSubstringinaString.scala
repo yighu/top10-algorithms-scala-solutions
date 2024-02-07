@@ -35,5 +35,5 @@ object CountNumberofDistinctSubstringinaString extends App {
   }
 
   val cnt = distinctSubstring("aaa")
-  System.out.println("Count of distinct substrings: " + cnt)
+  println("Count of distinct substrings: " + cnt)
 }

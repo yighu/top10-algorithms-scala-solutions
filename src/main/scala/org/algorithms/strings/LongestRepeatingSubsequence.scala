@@ -28,6 +28,6 @@ object LongestRepeatingSubsequence extends App{
   }
 
   val str = "aabb"
-  System.out.println("The length of the largest subsequence that " +
+  println("The length of the largest subsequence that " +
     "repeats itself is : " + findLongestRepeatingSubSeq(str))
 }

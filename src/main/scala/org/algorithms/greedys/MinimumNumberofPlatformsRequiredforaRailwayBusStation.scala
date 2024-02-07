@@ -57,5 +57,5 @@ object MinimumNumberofPlatformsRequiredforaRailwayBusStation extends App {
   val arr = Array(900, 940, 950, 1100, 1500, 1800)
   val dep = Array(910, 1200, 1120, 1130, 1900, 2000)
   val n = arr.length
-  System.out.println("Minimum Number of Platforms Required = " + findPlatform(arr, dep, n))
+  println("Minimum Number of Platforms Required = " + findPlatform(arr, dep, n))
 }

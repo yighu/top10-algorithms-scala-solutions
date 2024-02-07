@@ -34,5 +34,5 @@ object Equilibriumindexofanarray extends App{
   val arr_size = arr.length
 
   // Function call
-  System.out.println(equilibrium(arr, arr_size))
+  println(equilibrium(arr, arr_size))
 }

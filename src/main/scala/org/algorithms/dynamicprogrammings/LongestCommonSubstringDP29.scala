@@ -59,5 +59,5 @@ object LongestCommonSubstringDP29 extends App {
   val m = X.length
   val n = Y.length
 
-  System.out.println("Length of Longest Common Substring is " + LCSubStr(X.toCharArray, Y.toCharArray, m, n))
+  println("Length of Longest Common Substring is " + LCSubStr(X.toCharArray, Y.toCharArray, m, n))
 }

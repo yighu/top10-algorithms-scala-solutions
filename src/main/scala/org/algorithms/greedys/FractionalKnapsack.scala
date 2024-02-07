@@ -57,5 +57,5 @@ object FractionalKnapsack extends App {
   val capacity = 50
 
   val maxValue = getMaxValue(arr, capacity)
-  System.out.println(maxValue)
+  println(maxValue)
 }

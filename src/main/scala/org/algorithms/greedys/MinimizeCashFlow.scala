@@ -67,7 +67,7 @@ object MinimizeCashFlow extends App {
     amount(mxCredit) -= min
     amount(mxDebit) += min
     // If minimum is the maximum amount to be
-    System.out.println("Person " + mxDebit + " pays " + min + " to " + "Person " + mxCredit)
+    println("Person " + mxDebit + " pays " + min + " to " + "Person " + mxCredit)
     // Recur for the amount array.
     // Note that it is guaranteed that
     // the recursion would terminate

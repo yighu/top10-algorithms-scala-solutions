@@ -14,5 +14,5 @@ object FindtheMissingNumber extends App{
   def getMissingNo(nums: Array[Int], n: Int): Int = n * (n+1)/2 - nums.sum
 
   val arr = Array(1, 2, 3, 5)
-  System.out.println(getMissingNo(arr, 5))
+  println(getMissingNo(arr, 5))
 }

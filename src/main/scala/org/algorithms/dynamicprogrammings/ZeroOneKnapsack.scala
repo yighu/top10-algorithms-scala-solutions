@@ -21,5 +21,5 @@ object ZeroOneKnapsack extends App {
   val weight = Array[Int](10, 20, 30)
   val W = 50
   val n = profit.length
-  System.out.println(knapSack(W, weight, profit, n))
+  println(knapSack(W, weight, profit, n))
 }

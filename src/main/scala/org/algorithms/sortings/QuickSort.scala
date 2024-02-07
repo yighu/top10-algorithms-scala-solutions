@@ -82,6 +82,6 @@ object QuickSort extends App {
   val arr = Array(10, 7, 8, 9, 1, 5)
 
   sort(arr)
-  System.out.println("Sorted array:")
+  println("Sorted array:")
   arr.foreach(println)
 }

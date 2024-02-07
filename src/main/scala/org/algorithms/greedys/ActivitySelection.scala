@@ -29,16 +29,16 @@ object ActivitySelection extends App {
   def printMaxActivities(raw: Array[Activity], n: Int): Unit = {
     // Sort jobs according to finish time
     val arr = raw.sortWith((a,b)=>a.finish<b.finish)
-    System.out.println("Following activities are selected :")
+    println("Following activities are selected :")
     // The first activity always gets selected
     var i = 0
-    System.out.print("(" + arr(i).start + ", " + arr(i).finish + ")")
+    print("(" + arr(i).start + ", " + arr(i).finish + ")")
     // Consider rest of the activities
     for (j <- 1 until n) {
       // If this activity has start time greater than or equal to the finish time of previously selected activity,
       // then select it
       if (arr(j).start >= arr(i).finish) {
-        System.out.print(", (" + arr(j).start + ", " + arr(j).finish + ")")
+        print(", (" + arr(j).start + ", " + arr(j).finish + ")")
         i = j
       }
     }

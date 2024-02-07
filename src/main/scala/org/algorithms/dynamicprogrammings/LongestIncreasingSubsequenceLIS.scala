@@ -26,5 +26,5 @@ object LongestIncreasingSubsequenceLIS extends App {
 
   val arr = Array(10, 22, 9, 33, 21, 50, 41, 60)
   val n = arr.length
-  System.out.println("Length of lis is " + lis(arr, n))
+  println("Length of lis is " + lis(arr, n))
 }

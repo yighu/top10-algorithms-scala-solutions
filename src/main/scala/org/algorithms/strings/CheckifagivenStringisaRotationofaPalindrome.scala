@@ -20,7 +20,7 @@ object CheckifagivenStringisaRotationofaPalindrome extends App {
     loop(str, str.length)
   }
 
-  System.out.println(if (isRotationOfPalindrome("aab")) 1 else 0)
-  System.out.println(if (isRotationOfPalindrome("abcde")) 1 else 0)
-  System.out.println(if (isRotationOfPalindrome("aaaad")) 1 else 0)
+  println(if (isRotationOfPalindrome("aab")) 1 else 0)
+  println(if (isRotationOfPalindrome("abcde")) 1 else 0)
+  println(if (isRotationOfPalindrome("aaaad")) 1 else 0)
 }

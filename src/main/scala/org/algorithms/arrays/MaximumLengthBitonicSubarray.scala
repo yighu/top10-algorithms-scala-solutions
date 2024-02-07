@@ -39,5 +39,5 @@ object MaximumLengthBitonicSubarray extends App {
 
   val arr = Array(12, 4, 78, 90, 45, 23)
   val n = arr.length
-  System.out.println("Length of max length Bitonic Subarray is " + bitonic(arr, n))
+  println("Length of max length Bitonic Subarray is " + bitonic(arr, n))
 }

@@ -25,5 +25,5 @@ object MaximumLengthChainofPairs extends App {
   }
 
   val p = List(P(5, 24), P(39, 60), P(15, 28), P(27, 40), P(50, 90))
-  System.out.println(maxChainLen(p, p.length))
+  println(maxChainLen(p, p.length))
 }

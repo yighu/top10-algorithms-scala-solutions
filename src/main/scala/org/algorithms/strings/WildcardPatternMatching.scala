@@ -94,6 +94,6 @@ object WildcardPatternMatching extends App{
   // char pattern[] = "?baaabab";
   // char pattern[] = "*baaaba*";
 
-  if (isMatch(str, pattern)) System.out.println("Yes")
-  else System.out.println("No")
+  if (isMatch(str, pattern)) println("Yes")
+  else println("No")
 }

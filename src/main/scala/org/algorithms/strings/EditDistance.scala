@@ -68,5 +68,5 @@ object EditDistance extends App{
   val str1 = "sunday"
   val str2 = "saturday"
 
-  System.out.println(editDist(str1, str2, str1.length, str2.length))
+  println(editDist(str1, str2, str1.length, str2.length))
 }

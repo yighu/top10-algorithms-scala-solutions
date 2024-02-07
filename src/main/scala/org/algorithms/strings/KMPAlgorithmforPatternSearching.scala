@@ -34,7 +34,7 @@ object KMPAlgorithmforPatternSearching extends App {
         i += 1
       }
       if (j == M) {
-        System.out.println("Found pattern " + "at index " + (i - j))
+        println("Found pattern " + "at index " + (i - j))
         j = lps(j - 1)
       }
       else { // mismatch after j matches
