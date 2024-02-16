@@ -88,10 +88,12 @@ object LongestCommonSubsequenceLCS extends App {
 
   def lcsDynamicsfastOneArray(X: List[Char], Y: List[Char], m: Int, n: Int): Int = {
     val dp = Array.ofDim[Int](n+1)
+    var temp = 0
+    var prev = 0
     for (i <- 1 to m) {
-      var prev = 0
+      prev = 0
       for (j <- 1 to n) {
-        var temp = dp(j)
+        temp = dp(j)
         if (X(i - 1) == Y(j - 1)) {
           dp(j) = dp(j - 1) + 1
         } else {
